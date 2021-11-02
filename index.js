@@ -1,6 +1,6 @@
-var playerScore = 1;
-var computerScore = 1;
-var draws = 1;
+var playerScore = 0;
+var computerScore = 0;
+var draws = 0;
 let roundWinner = '';
 const rockBtn = document.getElementById('rock');
 const paperBtn = document.getElementById('paper');
@@ -19,10 +19,12 @@ function handleClick(playerSelection){
 
 
 function updateScore(playerScore, computerScore){
-  if(playerScore == 6){
-      document.getElementById('roundWinner').append("Man has beat machine!")
-  }else if(computerScore == 6){
-      document.getElementById('roundWinner').append("The computer cheated, try again, jk you lost.")
+  if(playerScore == 5){
+      alert("You win!");
+        reset();
+  }else if(computerScore == 5){
+        alert("You lose!");
+            reset();
   }
 }
 
@@ -41,22 +43,31 @@ function computerPlay(){
 
 function playRound(playerSelection, computerSelection){
     if( playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "paper" && computerSelection == "rock" || playerSelection == "scissors" && computerSelection == "paper"){
-        playerScore+ 1;
+        playerScore ++;
         roundWinner = "Player";
-        document.getElementById('pScore').append(playerScore++);
+        document.getElementById('pScore').append(playerScore);
         document.getElementById('roundWinner').innerHTML = roundWinner + " Wins!";
     
     }
     
     else if(playerSelection == "rock" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "rock"){
-        computerScore+ 1 ;
+        computerScore++ ;
         roundWinner = "Computer";
-        document.getElementById('cScore').append(computerScore++)
+        document.getElementById('cScore').append(computerScore)
         document.getElementById('roundWinner').innerHTML = roundWinner + " Wins!";
     }else if (playerSelection == "rock" && computerSelection == "rock" || playerSelection == "paper" && computerSelection == "paper" || playerSelection == "scissors" && computerSelection == "scissors"){
-        draws+ 1 ;
-        document.getElementById("tie").append(draws++);
+        draws++;
+        document.getElementById("tie").append(draws);
         document.getElementById('roundWinner').innerHTML = "It's a tie!";
     } 
     console.log(playerScore, computerScore, draws);
+}
+
+function reset(){
+    playerScore = 0;
+    computerScore = 0;
+    draws = 0;
+    document.getElementById('pScore').textContent = "Player Score:";
+    document.getElementById('cScore').textContent = "Computer Score:";
+    document.getElementById('tie').textContent = "Draws:";
 }

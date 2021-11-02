@@ -27,6 +27,7 @@ body {
     background-image: url("images/fist.png");
     background-repeat: no-repeat;
     background-size: contain;
+  
     
   }
   
@@ -35,6 +36,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   
+  
   }
   
   
@@ -42,6 +44,7 @@ body {
     background-image: url("images/victory.png");
     background-repeat: no-repeat;
     background-size: contain;
+    
   }
   
  
@@ -57,7 +60,7 @@ body {
   }
   
   .pressed {
-    box-shadow: 0 3px 4px 0 #DBEDF3;
+    box-shadow: 0 3px 4px 0 #283149;
     opacity: 0.5;
   }
   
@@ -73,13 +76,13 @@ body {
     line-height: 2;
     font-weight: 900;
     color: #DA0463;
-    text-shadow: 3px 0 #DBEDF3;
+    text-shadow: 3px 0 #283149;
     border-radius: 15px;
     display: inline-block;
     width: 150px;
     height: 150px;
     text-align: center;
     margin: 10px;
-    background-color: white;
+    background-color: #283149;
   }
   
