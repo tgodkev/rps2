@@ -24,14 +24,14 @@ body {
   }
 
   .rock {
-    background-image: url("images/stone-g5c50776ea_1280.png");
+    background-image: url("images/fist.png");
     background-repeat: no-repeat;
     background-size: contain;
     
   }
   
   .paper {
-  background-image: url("images/scroll-g81094513d_640.png");
+  background-image: url("images/hand.png");
   background-repeat: no-repeat;
   background-size: contain;
   
@@ -39,7 +39,7 @@ body {
   
   
   .scissors {
-    background-image: url("images/grip-ged0ab64f0_1280.png");
+    background-image: url("images/victory.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
