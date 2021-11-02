@@ -1,6 +1,5 @@
 var playerScore = 0;
 var computerScore = 0;
-var draws = 0;
 let roundWinner = '';
 const rockBtn = document.getElementById('rock');
 const paperBtn = document.getElementById('paper');
@@ -56,18 +55,14 @@ function playRound(playerSelection, computerSelection){
         document.getElementById('cScore').append(computerScore)
         document.getElementById('roundWinner').innerHTML = roundWinner + " Wins!";
     }else if (playerSelection == "rock" && computerSelection == "rock" || playerSelection == "paper" && computerSelection == "paper" || playerSelection == "scissors" && computerSelection == "scissors"){
-        draws++;
-        document.getElementById("tie").append(draws);
         document.getElementById('roundWinner').innerHTML = "It's a tie!";
     } 
-    console.log(playerScore, computerScore, draws);
+    console.log(playerScore, computerScore,);
 }
 
 function reset(){
     playerScore = 0;
     computerScore = 0;
-    draws = 0;
     document.getElementById('pScore').textContent = "Player Score:";
     document.getElementById('cScore').textContent = "Computer Score:";
-    document.getElementById('tie').textContent = "Draws:";
 }
